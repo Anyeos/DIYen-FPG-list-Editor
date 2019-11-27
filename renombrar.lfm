@@ -1,0 +1,905 @@
+object FRenombrar: TFRenombrar
+  Left = 392
+  Height = 293
+  Top = 302
+  Width = 386
+  BorderStyle = bsSizeToolWin
+  Caption = 'Rename and reindex'
+  ClientHeight = 293
+  ClientWidth = 386
+  OnCreate = FormCreate
+  OnShow = FormShow
+  Position = poMainFormCenter
+  LCLVersion = '1.8.4.0'
+  object BCPanel1: TBCPanel
+    Left = 0
+    Height = 122
+    Top = 0
+    Width = 386
+    Align = alClient
+    Background.Color = clBtnFace
+    Background.ColorOpacity = 255
+    Background.Gradient1.StartColor = 16775925
+    Background.Gradient1.StartColorOpacity = 255
+    Background.Gradient1.DrawMode = dmSet
+    Background.Gradient1.EndColor = 16445670
+    Background.Gradient1.EndColorOpacity = 255
+    Background.Gradient1.ColorCorrection = True
+    Background.Gradient1.GradientType = gtLinear
+    Background.Gradient1.Point2YPercent = 100
+    Background.Gradient1.Sinus = False
+    Background.Gradient2.StartColor = 16049884
+    Background.Gradient2.StartColorOpacity = 255
+    Background.Gradient2.DrawMode = dmSet
+    Background.Gradient2.EndColor = 16247261
+    Background.Gradient2.EndColorOpacity = 255
+    Background.Gradient2.ColorCorrection = True
+    Background.Gradient2.GradientType = gtLinear
+    Background.Gradient2.Point2YPercent = 100
+    Background.Gradient2.Sinus = False
+    Background.Gradient1EndPercent = 50
+    Background.Style = bbsGradient
+    BevelInner = bvNone
+    BevelOuter = bvRaised
+    BevelWidth = 1
+    Border.Color = 12824480
+    Border.ColorOpacity = 200
+    Border.LightColor = clWhite
+    Border.LightOpacity = 200
+    Border.LightWidth = 1
+    Border.Style = bboSolid
+    Border.Width = 1
+    BorderBCStyle = bpsBorder
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    FontEx.Color = clDefault
+    FontEx.EndEllipsis = False
+    FontEx.FontQuality = fqSystemClearType
+    FontEx.Height = 0
+    FontEx.SingleLine = True
+    FontEx.Shadow = False
+    FontEx.ShadowColor = clBlack
+    FontEx.ShadowColorOpacity = 255
+    FontEx.ShadowRadius = 5
+    FontEx.ShadowOffsetX = 5
+    FontEx.ShadowOffsetY = 5
+    FontEx.Style = []
+    FontEx.TextAlignment = bcaCenter
+    FontEx.WordBreak = False
+    Rounding.RoundX = 1
+    Rounding.RoundY = 1
+    Rounding.RoundOptions = [rrTopLeftSquare, rrTopRightSquare, rrBottomRightSquare, rrBottomLeftSquare]
+    TabOrder = 0
+    object BCLabel2: TBCLabel
+      Left = 5
+      Height = 21
+      Top = 5
+      Width = 376
+      Background.Color = clBlack
+      Background.ColorOpacity = 255
+      Background.Gradient1.StartColor = clWhite
+      Background.Gradient1.StartColorOpacity = 255
+      Background.Gradient1.DrawMode = dmSet
+      Background.Gradient1.EndColor = clBlack
+      Background.Gradient1.EndColorOpacity = 255
+      Background.Gradient1.ColorCorrection = True
+      Background.Gradient1.GradientType = gtLinear
+      Background.Gradient1.Point2YPercent = 100
+      Background.Gradient1.Sinus = False
+      Background.Gradient2.StartColor = clWhite
+      Background.Gradient2.StartColorOpacity = 255
+      Background.Gradient2.DrawMode = dmSet
+      Background.Gradient2.EndColor = clBlack
+      Background.Gradient2.EndColorOpacity = 255
+      Background.Gradient2.ColorCorrection = True
+      Background.Gradient2.GradientType = gtLinear
+      Background.Gradient2.Point2YPercent = 100
+      Background.Gradient2.Sinus = False
+      Background.Gradient1EndPercent = 35
+      Background.Style = bbsClear
+      Border.Color = clBlack
+      Border.ColorOpacity = 255
+      Border.LightColor = clWhite
+      Border.LightOpacity = 255
+      Border.LightWidth = 0
+      Border.Style = bboNone
+      Border.Width = 1
+      BorderSpacing.Left = 5
+      BorderSpacing.Top = 5
+      BorderSpacing.Right = 5
+      Caption = 'Index:'
+      FontEx.Color = clDefault
+      FontEx.EndEllipsis = False
+      FontEx.FontQuality = fqSystem
+      FontEx.Height = 12
+      FontEx.SingleLine = True
+      FontEx.Shadow = True
+      FontEx.ShadowColor = clBlack
+      FontEx.ShadowColorOpacity = 100
+      FontEx.ShadowRadius = 1
+      FontEx.ShadowOffsetX = 2
+      FontEx.ShadowOffsetY = 2
+      FontEx.Style = []
+      FontEx.TextAlignment = bcaCenter
+      FontEx.WordBreak = False
+      Rounding.RoundX = 1
+      Rounding.RoundY = 1
+      Rounding.RoundOptions = []
+    end
+    object EdIndex: TSpinEdit
+      Left = 5
+      Height = 25
+      Top = 26
+      Width = 376
+      BorderSpacing.Left = 5
+      BorderSpacing.Right = 5
+      BorderSpacing.Bottom = 10
+      MaxValue = 99
+      MinValue = 1
+      OnChange = EdChange
+      OnKeyDown = EdKeyDown
+      TabOrder = 0
+      Value = 1
+    end
+    object BCLabel1: TBCLabel
+      Left = 5
+      Height = 21
+      Top = 61
+      Width = 376
+      Background.Color = clBlack
+      Background.ColorOpacity = 255
+      Background.Gradient1.StartColor = clWhite
+      Background.Gradient1.StartColorOpacity = 255
+      Background.Gradient1.DrawMode = dmSet
+      Background.Gradient1.EndColor = clBlack
+      Background.Gradient1.EndColorOpacity = 255
+      Background.Gradient1.ColorCorrection = True
+      Background.Gradient1.GradientType = gtLinear
+      Background.Gradient1.Point2YPercent = 100
+      Background.Gradient1.Sinus = False
+      Background.Gradient2.StartColor = clWhite
+      Background.Gradient2.StartColorOpacity = 255
+      Background.Gradient2.DrawMode = dmSet
+      Background.Gradient2.EndColor = clBlack
+      Background.Gradient2.EndColorOpacity = 255
+      Background.Gradient2.ColorCorrection = True
+      Background.Gradient2.GradientType = gtLinear
+      Background.Gradient2.Point2YPercent = 100
+      Background.Gradient2.Sinus = False
+      Background.Gradient1EndPercent = 35
+      Background.Style = bbsClear
+      Border.Color = clBlack
+      Border.ColorOpacity = 255
+      Border.LightColor = clWhite
+      Border.LightOpacity = 255
+      Border.LightWidth = 0
+      Border.Style = bboNone
+      Border.Width = 1
+      BorderSpacing.Left = 5
+      BorderSpacing.Top = 5
+      BorderSpacing.Right = 5
+      Caption = 'Name:'
+      FontEx.Color = clDefault
+      FontEx.EndEllipsis = False
+      FontEx.FontQuality = fqSystem
+      FontEx.Height = 12
+      FontEx.SingleLine = True
+      FontEx.Shadow = True
+      FontEx.ShadowColor = clBlack
+      FontEx.ShadowColorOpacity = 100
+      FontEx.ShadowRadius = 1
+      FontEx.ShadowOffsetX = 2
+      FontEx.ShadowOffsetY = 2
+      FontEx.Style = []
+      FontEx.TextAlignment = bcaCenter
+      FontEx.WordBreak = False
+      Rounding.RoundX = 1
+      Rounding.RoundY = 1
+      Rounding.RoundOptions = []
+    end
+    object EdName: TEdit
+      Left = 5
+      Height = 25
+      Top = 82
+      Width = 376
+      BorderSpacing.Left = 5
+      BorderSpacing.Right = 5
+      BorderSpacing.Bottom = 10
+      OnChange = EdChange
+      OnKeyDown = EdKeyDown
+      TabOrder = 1
+      Text = 'EdName'
+    end
+  end
+  object BCPaperPanel1: TBCPaperPanel
+    Left = 0
+    Height = 56
+    Top = 237
+    Width = 386
+    Align = alBottom
+    Alignment = taLeftJustify
+    Caption = 'BCPaperPanel1'
+    ChildSizing.HorizontalSpacing = 10
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousSpaceResize
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 2
+    ClientHeight = 56
+    ClientWidth = 386
+    Color = clWhite
+    ParentColor = False
+    TabOrder = 2
+    object BCButton1: TBCButton
+      Left = 10
+      Height = 40
+      Top = 10
+      Width = 164
+      Action = Ok
+      StateClicked.Background.Color = clBlack
+      StateClicked.Background.ColorOpacity = 255
+      StateClicked.Background.Gradient1.StartColor = 8404992
+      StateClicked.Background.Gradient1.StartColorOpacity = 255
+      StateClicked.Background.Gradient1.DrawMode = dmSet
+      StateClicked.Background.Gradient1.EndColor = 4194304
+      StateClicked.Background.Gradient1.EndColorOpacity = 255
+      StateClicked.Background.Gradient1.ColorCorrection = True
+      StateClicked.Background.Gradient1.GradientType = gtRadial
+      StateClicked.Background.Gradient1.Point1XPercent = 50
+      StateClicked.Background.Gradient1.Point1YPercent = 100
+      StateClicked.Background.Gradient1.Sinus = False
+      StateClicked.Background.Gradient2.StartColor = clWhite
+      StateClicked.Background.Gradient2.StartColorOpacity = 255
+      StateClicked.Background.Gradient2.DrawMode = dmSet
+      StateClicked.Background.Gradient2.EndColor = clBlack
+      StateClicked.Background.Gradient2.EndColorOpacity = 255
+      StateClicked.Background.Gradient2.ColorCorrection = True
+      StateClicked.Background.Gradient2.GradientType = gtLinear
+      StateClicked.Background.Gradient2.Point2YPercent = 100
+      StateClicked.Background.Gradient2.Sinus = False
+      StateClicked.Background.Gradient1EndPercent = 100
+      StateClicked.Background.Style = bbsGradient
+      StateClicked.Border.Color = clBlack
+      StateClicked.Border.ColorOpacity = 255
+      StateClicked.Border.LightColor = clWhite
+      StateClicked.Border.LightOpacity = 255
+      StateClicked.Border.LightWidth = 0
+      StateClicked.Border.Style = bboNone
+      StateClicked.Border.Width = 1
+      StateClicked.FontEx.Color = 16770790
+      StateClicked.FontEx.EndEllipsis = False
+      StateClicked.FontEx.FontQuality = fqFineAntialiasing
+      StateClicked.FontEx.Height = 0
+      StateClicked.FontEx.SingleLine = True
+      StateClicked.FontEx.Shadow = True
+      StateClicked.FontEx.ShadowColor = clBlack
+      StateClicked.FontEx.ShadowColorOpacity = 255
+      StateClicked.FontEx.ShadowRadius = 2
+      StateClicked.FontEx.ShadowOffsetX = 1
+      StateClicked.FontEx.ShadowOffsetY = 1
+      StateClicked.FontEx.Style = [fsBold]
+      StateClicked.FontEx.TextAlignment = bcaCenter
+      StateClicked.FontEx.WordBreak = False
+      StateHover.Background.Color = clBlack
+      StateHover.Background.ColorOpacity = 255
+      StateHover.Background.Gradient1.StartColor = 16744448
+      StateHover.Background.Gradient1.StartColorOpacity = 255
+      StateHover.Background.Gradient1.DrawMode = dmSet
+      StateHover.Background.Gradient1.EndColor = 8404992
+      StateHover.Background.Gradient1.EndColorOpacity = 255
+      StateHover.Background.Gradient1.ColorCorrection = True
+      StateHover.Background.Gradient1.GradientType = gtRadial
+      StateHover.Background.Gradient1.Point1XPercent = 50
+      StateHover.Background.Gradient1.Point1YPercent = 100
+      StateHover.Background.Gradient1.Sinus = False
+      StateHover.Background.Gradient2.StartColor = clWhite
+      StateHover.Background.Gradient2.StartColorOpacity = 255
+      StateHover.Background.Gradient2.DrawMode = dmSet
+      StateHover.Background.Gradient2.EndColor = clBlack
+      StateHover.Background.Gradient2.EndColorOpacity = 255
+      StateHover.Background.Gradient2.ColorCorrection = True
+      StateHover.Background.Gradient2.GradientType = gtLinear
+      StateHover.Background.Gradient2.Point2YPercent = 100
+      StateHover.Background.Gradient2.Sinus = False
+      StateHover.Background.Gradient1EndPercent = 100
+      StateHover.Background.Style = bbsGradient
+      StateHover.Border.Color = clBlack
+      StateHover.Border.ColorOpacity = 255
+      StateHover.Border.LightColor = clWhite
+      StateHover.Border.LightOpacity = 255
+      StateHover.Border.LightWidth = 0
+      StateHover.Border.Style = bboNone
+      StateHover.Border.Width = 1
+      StateHover.FontEx.Color = clWhite
+      StateHover.FontEx.EndEllipsis = False
+      StateHover.FontEx.FontQuality = fqFineAntialiasing
+      StateHover.FontEx.Height = 0
+      StateHover.FontEx.SingleLine = True
+      StateHover.FontEx.Shadow = True
+      StateHover.FontEx.ShadowColor = clBlack
+      StateHover.FontEx.ShadowColorOpacity = 255
+      StateHover.FontEx.ShadowRadius = 2
+      StateHover.FontEx.ShadowOffsetX = 1
+      StateHover.FontEx.ShadowOffsetY = 1
+      StateHover.FontEx.Style = [fsBold]
+      StateHover.FontEx.TextAlignment = bcaCenter
+      StateHover.FontEx.WordBreak = False
+      StateNormal.Background.Color = clBlack
+      StateNormal.Background.ColorOpacity = 255
+      StateNormal.Background.Gradient1.StartColor = 4194304
+      StateNormal.Background.Gradient1.StartColorOpacity = 255
+      StateNormal.Background.Gradient1.DrawMode = dmSet
+      StateNormal.Background.Gradient1.EndColor = 8405056
+      StateNormal.Background.Gradient1.EndColorOpacity = 255
+      StateNormal.Background.Gradient1.ColorCorrection = True
+      StateNormal.Background.Gradient1.GradientType = gtLinear
+      StateNormal.Background.Gradient1.Point2YPercent = 100
+      StateNormal.Background.Gradient1.Sinus = False
+      StateNormal.Background.Gradient2.StartColor = 8405056
+      StateNormal.Background.Gradient2.StartColorOpacity = 255
+      StateNormal.Background.Gradient2.DrawMode = dmSet
+      StateNormal.Background.Gradient2.EndColor = 4194304
+      StateNormal.Background.Gradient2.EndColorOpacity = 255
+      StateNormal.Background.Gradient2.ColorCorrection = True
+      StateNormal.Background.Gradient2.GradientType = gtRadial
+      StateNormal.Background.Gradient2.Point1XPercent = 50
+      StateNormal.Background.Gradient2.Point1YPercent = 100
+      StateNormal.Background.Gradient2.Sinus = False
+      StateNormal.Background.Gradient1EndPercent = 60
+      StateNormal.Background.Style = bbsGradient
+      StateNormal.Border.Color = clBlack
+      StateNormal.Border.ColorOpacity = 255
+      StateNormal.Border.LightColor = clWhite
+      StateNormal.Border.LightOpacity = 255
+      StateNormal.Border.LightWidth = 0
+      StateNormal.Border.Style = bboNone
+      StateNormal.Border.Width = 1
+      StateNormal.FontEx.Color = 16770790
+      StateNormal.FontEx.EndEllipsis = False
+      StateNormal.FontEx.FontQuality = fqFineAntialiasing
+      StateNormal.FontEx.Height = 0
+      StateNormal.FontEx.SingleLine = True
+      StateNormal.FontEx.Shadow = True
+      StateNormal.FontEx.ShadowColor = clBlack
+      StateNormal.FontEx.ShadowColorOpacity = 255
+      StateNormal.FontEx.ShadowRadius = 2
+      StateNormal.FontEx.ShadowOffsetX = 1
+      StateNormal.FontEx.ShadowOffsetY = 1
+      StateNormal.FontEx.Style = [fsBold]
+      StateNormal.FontEx.TextAlignment = bcaCenter
+      StateNormal.FontEx.WordBreak = False
+      BorderSpacing.Around = 10
+      Color = clNone
+      DropDownWidth = 16
+      DropDownArrowSize = 8
+      GlobalOpacity = 255
+      Glyph.Data = {
+        36100000424D3610000000000000360000002800000020000000200000000100
+        2000000000000010000064000000640000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000280000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        00000000000000360000002B0012134F23F21F6238FF002A001F003400000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        00000039000000350010002B00F33CC081FE40D28DFE002E00FB0036001A0039
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        000000000000000000000000000000000000000000000000000000000000003F
+        0000003C000D003000F139B278FE12EA5FFF10EA5DFF3CC080FE003200F9003C
+        0017003E00000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000004300000041
+        000B003500EE33AA6EFE12DE5AFF12DB59FF12DD59FF11DC56FF37B777FE0037
+        00F7004200140043000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        00000000000000000000000000000000000000000000004A000000450008003B
+        00EB2EA163FE11CF52FF11CE52FF11D153FF11D154FF11CF53FF10CF50FF31AD
+        6CFE003C00F40046001000490000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        00000000000000000000000000000000000000500000004F0006004200E92A9A
+        5AFE11C24DFF0FC14BFF0FC44DFF10C74EFF10C74EFF0FC64EFF0FC24CFF0FC1
+        4AFF2DA461FE004200F1004B000E005000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        00000000000000000000000000000056000000520004004900E522914DFE0AB2
+        43FF09B340FF0AB643FF0CBA46FF0EBB48FF0EBD48FF0EBC47FF0EB947FF0EB5
+        45FF0DB344FF289B57FE004A00EE0053000B0056000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        00000000000000000000005C000000540002005000E22E9450FE3FBD65FF3DBC
+        62FF3EBF65FF40C367FF3FC468FF3CC366FF3BC466FF39C065FF23B754FF03A8
+        39FF03A337FF06A239FF22934BFE005100EB00570008005C0000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000060000000530201005800DF299047FE48BA65FF44B961FF44BC
+        63FF44C065FF44C166FF44C365FF41B96CFF3EB368FF43C564FF53C772FF6ECD
+        86FF68C882FF5DBF79FF51B671FF3E9B5CFE005500E8005C0006006000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        00000065000000000000005D00DB278D3FFE50B66AFF4CB564FF4CB966FF4DBC
+        67FF4DBE69FF4EC068FF50BF74FE015103FF004D00FE4CBA71FE4DC168FF4CBF
+        68FF4CBC67FF49B863FF46B45FFF65BE79FF65AC74FE005A00E6005E00040065
+        0000000000000000000000000000000000000000000000000000000000001475
+        140000000000006300D8248A37FE5AB66EFF55B468FF56B66AFF56B96BFF56BC
+        6CFF56BE6DFF5BBF78FE015A04FF005600530057003E005600FF56BA74FE57BF
+        6DFF56BC6CFF56BB6CFF56B76AFF55B469FF66BA78FF59A566FE006000E20061
+        0002006900000000000000000000000000000000000000000000000000000000
+        00001A7B1AB9389546FF63B572FF5FB36CFF5FB66DFF5FB96FFF5FBC70FF60BE
+        71FF64C17CFE026204FF005E005A0000000000000000005F0045005D00FF61BD
+        77FE60BE71FF60BB71FF5FBA6FFF5FB76EFF5FB46DFF6FBA7CFF4DA058FE0066
+        00DE01510100006D000000000000000000000000000000000000000000000000
+        000020821FBF439C4EFE72BB7CFF68B773FF68BA74FF69BC75FF69BE76FF6FC1
+        81FE036A05FF00650060000000000000000000000000000000000065004B0066
+        00FF6BBE7DFE68BF76FF69BC76FF68BA75FF68B873FF68B572FF78BB81FF439B
+        4DFE006B00DB000000000072000000000000000000000000000000000000157A
+        150000510001006D00DF399842FE7CC285FF72BE7BFF72C07CFF79C486FE0372
+        06FF006D0067000000000000000000000000000000000000000000000000006D
+        0051006F00FF75C182FE72C07BFF72BF7BFF71BC7AFF71BA79FF71B877FF81BF
+        87FF3B9741FF007200D700000000007600000000000000000000000000000000
+        000000730000007C0003007200E3419D47FE84C88AFF82C78AFF057A05FF0075
+        006E000000000000000000000000000000000000000000000000000000000000
+        000000760057007600FF80C588FE7AC481FF7BC281FF7BC081FF7BBE7FFF7BBC
+        7EFF89C18CFF329235FF007700D200000000007B000000000000000000000000
+        00000000000000770000007A0005007500E796CA98FE369837FF007C00750000
+        0000000000000000000000000000000000000000000000000000000000000000
+        000000000000007D005E007B00FF8BC98EFE84C888FF85C688FF85C587FF85C3
+        86FF84C185FF91C692FF2A902BFF007C00CE00000000007F0000000000000000
+        00000000000000000000007C0000006D000B83C483BD5EB25E6C000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000810065018001FF96CF97FE8ECE90FF8ECD90FF8ECB
+        8FFF8ECA8EFF8EC98EFF99CF99FF279227FF008000CA00000000000000000000
+        00000000000000000000000000004BA54B000000000000000000FFFFFF000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        00000000000000000000000000000086006D038603FFA1D7A1FF98D699FF99D5
+        99FF99D599FF99D599FF9AD69AFFADDEADFF5AAF5AFF4FAA4F56000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        000000000000000000000000000000000000008A0074068B06FFADDFADFFA3E1
+        A3FFA3E0A3FFA3E0A3FFAFE7AFFF5AB25AFE119011E9ADD6AD0A000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        00000000000000000000000000000000000000000000008F007C0A8F0AFFB8EA
+        B8FFAEECAEFFB8F1B8FF64B864FE008700EC00880008007A0000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000008F00840D90
+        0DFFC9F7C9FF73C173FE008500EF008D000B008C000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000088
+        008C9BD19BFF59B559F6007F000E008C00000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000008C00000000
+        000096D39645EEFBEE0E007B0000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        000000000000000000000000000000000000000000000000000000000000FFFF
+        FF00000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000
+      }
+      GlyphMargin = -50
+      ParentColor = False
+      Rounding.RoundX = 12
+      Rounding.RoundY = 12
+      Rounding.RoundOptions = []
+      RoundingDropDown.RoundX = 1
+      RoundingDropDown.RoundY = 1
+      RoundingDropDown.RoundOptions = []
+      TextApplyGlobalOpacity = False
+      MemoryUsage = bmuHigh
+    end
+    object BCButton2: TBCButton
+      Left = 184
+      Height = 40
+      Top = 10
+      Width = 192
+      Action = Cancel
+      StateClicked.Background.Color = clBlack
+      StateClicked.Background.ColorOpacity = 255
+      StateClicked.Background.Gradient1.StartColor = 8404992
+      StateClicked.Background.Gradient1.StartColorOpacity = 255
+      StateClicked.Background.Gradient1.DrawMode = dmSet
+      StateClicked.Background.Gradient1.EndColor = 4194304
+      StateClicked.Background.Gradient1.EndColorOpacity = 255
+      StateClicked.Background.Gradient1.ColorCorrection = True
+      StateClicked.Background.Gradient1.GradientType = gtRadial
+      StateClicked.Background.Gradient1.Point1XPercent = 50
+      StateClicked.Background.Gradient1.Point1YPercent = 100
+      StateClicked.Background.Gradient1.Sinus = False
+      StateClicked.Background.Gradient2.StartColor = clWhite
+      StateClicked.Background.Gradient2.StartColorOpacity = 255
+      StateClicked.Background.Gradient2.DrawMode = dmSet
+      StateClicked.Background.Gradient2.EndColor = clBlack
+      StateClicked.Background.Gradient2.EndColorOpacity = 255
+      StateClicked.Background.Gradient2.ColorCorrection = True
+      StateClicked.Background.Gradient2.GradientType = gtLinear
+      StateClicked.Background.Gradient2.Point2YPercent = 100
+      StateClicked.Background.Gradient2.Sinus = False
+      StateClicked.Background.Gradient1EndPercent = 100
+      StateClicked.Background.Style = bbsGradient
+      StateClicked.Border.Color = clBlack
+      StateClicked.Border.ColorOpacity = 255
+      StateClicked.Border.LightColor = clWhite
+      StateClicked.Border.LightOpacity = 255
+      StateClicked.Border.LightWidth = 0
+      StateClicked.Border.Style = bboNone
+      StateClicked.Border.Width = 1
+      StateClicked.FontEx.Color = 16770790
+      StateClicked.FontEx.EndEllipsis = False
+      StateClicked.FontEx.FontQuality = fqFineAntialiasing
+      StateClicked.FontEx.Height = 0
+      StateClicked.FontEx.SingleLine = True
+      StateClicked.FontEx.Shadow = True
+      StateClicked.FontEx.ShadowColor = clBlack
+      StateClicked.FontEx.ShadowColorOpacity = 255
+      StateClicked.FontEx.ShadowRadius = 2
+      StateClicked.FontEx.ShadowOffsetX = 1
+      StateClicked.FontEx.ShadowOffsetY = 1
+      StateClicked.FontEx.Style = [fsBold]
+      StateClicked.FontEx.TextAlignment = bcaCenter
+      StateClicked.FontEx.WordBreak = False
+      StateHover.Background.Color = clBlack
+      StateHover.Background.ColorOpacity = 255
+      StateHover.Background.Gradient1.StartColor = 16744448
+      StateHover.Background.Gradient1.StartColorOpacity = 255
+      StateHover.Background.Gradient1.DrawMode = dmSet
+      StateHover.Background.Gradient1.EndColor = 8404992
+      StateHover.Background.Gradient1.EndColorOpacity = 255
+      StateHover.Background.Gradient1.ColorCorrection = True
+      StateHover.Background.Gradient1.GradientType = gtRadial
+      StateHover.Background.Gradient1.Point1XPercent = 50
+      StateHover.Background.Gradient1.Point1YPercent = 100
+      StateHover.Background.Gradient1.Sinus = False
+      StateHover.Background.Gradient2.StartColor = clWhite
+      StateHover.Background.Gradient2.StartColorOpacity = 255
+      StateHover.Background.Gradient2.DrawMode = dmSet
+      StateHover.Background.Gradient2.EndColor = clBlack
+      StateHover.Background.Gradient2.EndColorOpacity = 255
+      StateHover.Background.Gradient2.ColorCorrection = True
+      StateHover.Background.Gradient2.GradientType = gtLinear
+      StateHover.Background.Gradient2.Point2YPercent = 100
+      StateHover.Background.Gradient2.Sinus = False
+      StateHover.Background.Gradient1EndPercent = 100
+      StateHover.Background.Style = bbsGradient
+      StateHover.Border.Color = clBlack
+      StateHover.Border.ColorOpacity = 255
+      StateHover.Border.LightColor = clWhite
+      StateHover.Border.LightOpacity = 255
+      StateHover.Border.LightWidth = 0
+      StateHover.Border.Style = bboNone
+      StateHover.Border.Width = 1
+      StateHover.FontEx.Color = clWhite
+      StateHover.FontEx.EndEllipsis = False
+      StateHover.FontEx.FontQuality = fqFineAntialiasing
+      StateHover.FontEx.Height = 0
+      StateHover.FontEx.SingleLine = True
+      StateHover.FontEx.Shadow = True
+      StateHover.FontEx.ShadowColor = clBlack
+      StateHover.FontEx.ShadowColorOpacity = 255
+      StateHover.FontEx.ShadowRadius = 2
+      StateHover.FontEx.ShadowOffsetX = 1
+      StateHover.FontEx.ShadowOffsetY = 1
+      StateHover.FontEx.Style = [fsBold]
+      StateHover.FontEx.TextAlignment = bcaCenter
+      StateHover.FontEx.WordBreak = False
+      StateNormal.Background.Color = clBlack
+      StateNormal.Background.ColorOpacity = 255
+      StateNormal.Background.Gradient1.StartColor = 4194304
+      StateNormal.Background.Gradient1.StartColorOpacity = 255
+      StateNormal.Background.Gradient1.DrawMode = dmSet
+      StateNormal.Background.Gradient1.EndColor = 8405056
+      StateNormal.Background.Gradient1.EndColorOpacity = 255
+      StateNormal.Background.Gradient1.ColorCorrection = True
+      StateNormal.Background.Gradient1.GradientType = gtLinear
+      StateNormal.Background.Gradient1.Point2YPercent = 100
+      StateNormal.Background.Gradient1.Sinus = False
+      StateNormal.Background.Gradient2.StartColor = 8405056
+      StateNormal.Background.Gradient2.StartColorOpacity = 255
+      StateNormal.Background.Gradient2.DrawMode = dmSet
+      StateNormal.Background.Gradient2.EndColor = 4194304
+      StateNormal.Background.Gradient2.EndColorOpacity = 255
+      StateNormal.Background.Gradient2.ColorCorrection = True
+      StateNormal.Background.Gradient2.GradientType = gtRadial
+      StateNormal.Background.Gradient2.Point1XPercent = 50
+      StateNormal.Background.Gradient2.Point1YPercent = 100
+      StateNormal.Background.Gradient2.Sinus = False
+      StateNormal.Background.Gradient1EndPercent = 60
+      StateNormal.Background.Style = bbsGradient
+      StateNormal.Border.Color = clBlack
+      StateNormal.Border.ColorOpacity = 255
+      StateNormal.Border.LightColor = clWhite
+      StateNormal.Border.LightOpacity = 255
+      StateNormal.Border.LightWidth = 0
+      StateNormal.Border.Style = bboNone
+      StateNormal.Border.Width = 1
+      StateNormal.FontEx.Color = 16770790
+      StateNormal.FontEx.EndEllipsis = False
+      StateNormal.FontEx.FontQuality = fqFineAntialiasing
+      StateNormal.FontEx.Height = 0
+      StateNormal.FontEx.SingleLine = True
+      StateNormal.FontEx.Shadow = True
+      StateNormal.FontEx.ShadowColor = clBlack
+      StateNormal.FontEx.ShadowColorOpacity = 255
+      StateNormal.FontEx.ShadowRadius = 2
+      StateNormal.FontEx.ShadowOffsetX = 1
+      StateNormal.FontEx.ShadowOffsetY = 1
+      StateNormal.FontEx.Style = [fsBold]
+      StateNormal.FontEx.TextAlignment = bcaCenter
+      StateNormal.FontEx.WordBreak = False
+      BorderSpacing.Around = 10
+      Color = clNone
+      DropDownWidth = 16
+      DropDownArrowSize = 8
+      GlobalOpacity = 255
+      Glyph.Data = {
+        36100000424D3610000000000000360000002800000020000000200000000100
+        2000000000000010000064000000640000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        00000000BF020000BF130000BF250000BE280000BE280000BE280000BE280000
+        BE280000BE280000BE280000BE280000BE280000BE280000BE280000BE280000
+        BE280000BE280000BE280000BE280000BE280000BE280000BE280000BE280000
+        BE280000BE280000BF250000BF130000BF020000000000000000000000000000
+        BF020608A3451D2192D7090E81FD00057CFF00057BFF00057BFF00057AFF0005
+        7AFF00057AFF000579FF000579FF000578FF000577FF000577FF000576FF0005
+        76FF000576FF000576FF000576FF000576FF000576FF000576FF000576FF0005
+        76FF000576FF0A0E7CFD0C1084D600029C450000BF0200000000000000000000
+        BE132E319DD74E64B4FF2842AAFF2440ADFF2444B2FF2448B7FF244BBBFF244F
+        C0FF2452C4FF2455C8FF2458CCFF245ACFFF245CD0FF245DD1FF245DD1FF245C
+        D1FF245ACFFF2458CCFF2456C8FF2453C4FF244FC0FF244CBCFF2448B7FF2444
+        B2FF2440ADFF2943AAFF3A50A6FF0C0F84D60000BE1300000000000000000000
+        BF25212696FE2238A7FF00028FFF000897FF000E9FFF0014A7FF001BAFFF0020
+        B7FF0026BEFF002BC5FF0030CBFF0034D0FF0037D4FF0039D6FF0039D6FF0037
+        D4FF0035D0FF0031CBFF002CC6FF0027BFFF0021B8FF001BB0FF0015A8FF000F
+        A0FF000998FF000290FF2339A8FF101683FD0000BF2500000000000000000000
+        BE280F1A94FF14229DFF000492FF000A9AFF0011A3FF0017ABFF001EB3FF0024
+        BCFF002AC3FF0030CBFF0035D1FF003AD7FF003EDCFF0040DFFF0040DFFF003E
+        DCFF003AD8FF0036D2FF0031CCFF002BC4FF0025BCFF001FB4FF0018ACFF0012
+        A4FF000B9BFF000493FF14239EFF0F1A87FF0000BE2800000000000000000000
+        BE280F1895FF14209DFF000594FF000C9DFF0013A5FF2E42BCFFE0E3F2FFAAB7
+        E8FF0633C9FF0034D0FF003AD7FF003FDEFF0044E4FF0046E7FF0047E8FF0044
+        E4FF0040DFFF003BD8FF0035D0FF0633CAFFAAB7E8FFE0E3F2FF2E43BDFF0014
+        A6FF000D9EFF000695FF14229EFF0F1986FF0000BE2800000000000000000000
+        BE280F1797FF131F9CFF000695FF000D9EFF2D3EB6FFE2E4F0FFF0F0F0FFF1F1
+        F1FFAEBDECFF063CD4FF003DDCFF0044E4FF0049EBFF004DF0FF004DF0FF004A
+        ECFF0044E5FF003EDDFF063CD5FFAEBDECFFF1F1F1FFF0F0F0FFE2E4F0FF2E3F
+        B7FF000E9FFF000797FF14209DFF0F1886FF0000BE2800000000000000000000
+        BE280E1598FF131C9BFF000796FF000E9FFFD9DBEBFFF0F0F0FFF0F0F0FFF0F0
+        F0FFEFEFEFFFADBEEEFF0644DFFF0046E7FF004DF0FF0053F7FF0053F8FF004E
+        F1FF0047E8FF0644E0FFABBDEDFFECECECFFEFEFEFFFF0F0F0FFF0F0F0FFDADC
+        EBFF000FA0FF000897FF131E9DFF0E1685FF0000BE2800000000000000000000
+        BE280E1399FF121A9BFF000796FF000E9FFF7A80B2FFE8E8E8FFF0F0F0FFEDED
+        EDFFEBEBEBFFE9E9E9FFACBFEFFF064BE7FF004DF0FF0053F7FF0053F8FF004E
+        F1FF064BE8FFA9BDEDFFE3E3E3FFE5E5E5FFEAEAEAFFEFEFEFFFECECECFF8288
+        BAFF000FA0FF000897FF131C9CFF0E1484FF0000BE2800000000000000000000
+        BE280D129BFF111899FF000695FF000D9EFF0317A7FF757DACFFE5E5E5FFEBEB
+        EBFFE8E8E8FFE5E5E5FFE4E4E4FFAABFEFFF064EEBFF004DF0FF004DF0FF064E
+        ECFFA6BCEDFFDADADAFFDBDBDBFFE0E0E0FFE6E6E6FFE7E7E7FF8088B7FF0318
+        A8FF000E9FFF000797FF121A9AFF0D1385FF0000BE2800000000000000000000
+        BE280C109DFF101598FF000594FF000C9DFF0013A5FF031CADFF6F78A7FFE0E0
+        E0FFE6E6E6FFE3E3E3FFE0E0E0FFDFDFDFFFA8BEEEFF064BE8FF064BE8FFA5BA
+        EBFFD3D3D3FFD2D2D2FFD6D6D6FFDCDCDCFFDEDEDEFF7982B2FF031DAEFF0014
+        A6FF000D9EFF000695FF111798FF0D1187FF0000BE2800000000000000000000
+        BE280B0E9EFF0F1397FF000392FF000A9AFF0011A3FF0017ABFF0320B2FF6973
+        A2FFDBDBDBFFE2E2E2FFDFDFDFFFDCDCDCFFDBDBDBFFA8BBEBFFA5B9EAFFD3D3
+        D3FFCECECEFFCECECEFFD3D3D3FFD5D5D5FF717CABFF0321B3FF0018ACFF0012
+        A4FF000B9BFF000493FF101497FF0C0F88FF0000BE2800000000000000000000
+        BE280A0C9FFF0D1096FF00028FFF000897FF000E9FFF0014A7FF001AAFFF0322
+        B5FF636E9DFFD6D6D6FFDEDEDEFFDCDCDCFFD9D9D9FFD8D8D8FFD5D5D5FFD1D1
+        D1FFCFCFCFFFD0D0D0FFCFCFCFFF6A76A5FF0323B6FF001BB0FF0015A8FF000F
+        A0FF000898FF000290FF0E1295FF0B0D8AFF0000BE2800000000000000000000
+        BE28090BA1FF0C0E95FF00008DFF000593FF000B9BFF0011A3FF0017AAFF001C
+        B1FF0323B6FF5D6897FFD3D3D3FFDCDCDCFFD9D9D9FFD6D6D6FFD4D4D4FFD2D2
+        D2FFD2D2D2FFCDCDCDFF6672A1FF0224B7FF001DB2FF0017ABFF0012A4FF000C
+        9CFF000594FF00008EFF0D1094FF0A0C8BFF0000BE2800000000000000000000
+        BE280809A3FF0A0C95FF00008DFF010390FF070E99FF101CA4FF1728ADFF1D32
+        B5FF223ABCFF2843C0FF777FA2FFDBDBDBFFDADADAFFD8D8D8FFD6D6D6FFD5D5
+        D5FFD4D4D4FF7C85ACFF0424B6FF001DB2FF0018ACFF0013A5FF000E9EFF0008
+        97FF000290FF00008DFF0B0D93FF090A8DFF0000BE2800000000000000000000
+        C0270607A5FF2829A2FF3131A3FF3E3EA9FF4446AEFF464DB4FF4650B9FF4654
+        BEFF4657C2FF4B5EC7FFBDC4E5FFDEDEDEFFDBDBDBFFD9D9D9FFD8D8D8FFD7D7
+        D7FFD8D8D8FFC8CDE7FF6575CFFF5A69C8FF515EC2FF4A55BCFF353DAEFF090D
+        96FF00008DFF00008DFF0A0B92FF07088FFF0000C02700000000000000000000
+        C2250505A6FF5353B4FF4E4EB0FF4E4EB0FF4E4FB0FF4E51B3FF4E54B8FF4E57
+        BCFF525EC1FFC1C6E5FFE3E3E3FFDFDFDFFFDDDDDDFFDBDBDBFFDADADAFFDADA
+        DAFFDADADAFFDDDDDDFFC0C5E4FF535EC1FF4E58BCFF4E55B8FF595BB8FF7373
+        C1FF6A6ABDFF5555B3FF21229CFF060690FF0000C22500000000000000000101
+        C6230303A8FF5959B7FF5656B4FF5656B4FF5656B4FF5657B4FF5659B6FF5A5F
+        BBFFC5C7E4FFE6E6E6FFE2E2E2FFE1E1E1FFDFDFDFFFDBDBDBFFDBDBDBFFDCDC
+        DCFFDDDDDDFFDDDDDDFFE1E1E1FFC4C6E3FF5A5FBCFF5659B7FF5657B4FF5656
+        B4FF5656B4FF5757B4FF9697D0FF0D0E96FF0101C62300000000000000000202
+        C9210101AAFF5F5FBAFF5E5EB7FF5E5EB7FF5E5EB7FF5E5EB7FF6161B8FFC8C8
+        E4FFE9E9E9FFE6E6E6FFE4E4E4FFE2E2E2FFDDDDDDFFA4A6C3FFA3A6C3FFDCDC
+        DCFFDFDFDFFFE0E0E0FFE2E2E2FFE5E5E5FFC7C8E3FF6161B9FF5E5EB7FF5E5E
+        B7FF5E5EB7FF5E5EB7FF8787C9FF0F0F99FF0202C92100000000000000000202
+        CC200000ACFF6666BDFF6666BAFF6666BAFF6666BAFF6969BCFFCBCBE5FFEDED
+        EDFFE9E9E9FFE8E8E8FFE6E6E6FFE0E0E0FFA0A2BCFF676BC0FF676BC0FF9FA1
+        BBFFDDDDDDFFE3E3E3FFE4E4E4FFE6E6E6FFEAEAEAFFCBCBE5FF6969BCFF6666
+        BAFF6666BAFF6666BAFF8C8CCCFF0E0E9BFF0202CC2000000000000000000303
+        CF1E0000AEFF6E6EC1FF6E6EBEFF6E6EBEFF7171BFFFCECEE7FFF0F0F0FFEDED
+        EDFFEBEBEBFFE9E9E9FFE2E2E2FF9D9DB6FF6F6FBEFF6E6EBFFF6E6EBFFF6F6F
+        BEFF9C9CB5FFE0E0E0FFE7E7E7FFE9E9E9FFEBEBEBFFEFEFEFFFCFCFE7FF7171
+        C0FF6E6EBEFF6E6EBEFF9191CEFF0D0D9DFF0303CF1E00000000000000000303
+        D31C0000B1FF7676C4FF7676C2FF7676C2FFCBCBE5FFF1F1F1FFF0F0F0FFEFEF
+        EFFFEDEDEDFFE4E4E4FF9A9AB1FF7676C1FF7676C2FF7676C2FF7676C2FF7676
+        C2FF7676C0FF9999B0FFE3E3E3FFECECECFFEEEEEEFFF0F0F0FFF1F1F1FFCCCC
+        E5FF7676C2FF7676C2FF9696D0FF0C0C9FFF0303D31C00000000000000000505
+        D61A0000B3FF7E7EC8FF7E7EC5FF7E7EC5FFBCBCC4FFEFEFEFFFF0F0F0FFF0F0
+        F0FFE6E6E6FF9696ACFF7E7EC4FF7E7EC5FF7E7EC5FF7E7EC5FF7E7EC5FF7E7E
+        C5FF7E7EC5FF7E7EC4FF9595ABFFE6E6E6FFF0F0F0FFF0F0F0FFEFEFEFFFBCBC
+        C4FF7E7EC5FF7E7EC5FF9C9CD3FF0C0CA1FF0505D61A00000000000000000707
+        D8180000B6FF8686CCFF8686C9FF8686C9FF8383BAFFB3B3B8FFEFEFEFFFE6E6
+        E6FF9292A6FF8585C7FF8686C9FF8686C9FF8686C9FF8686C9FF8686C9FF8686
+        C9FF8686C9FF8686C9FF8585C7FF9292A6FFE6E6E6FFEFEFEFFFB2B2B8FF8383
+        BBFF8686C9FF8686C9FFA1A1D5FF0C0CA4FF0707D81800000000000000000707
+        DA160000B9FF8E8ECFFF8E8ECCFF8E8ECCFF8E8ECCFF8787BAFF8F8F95FF8686
+        9AFF8D8DCAFF8E8ECCFF8E8ECCFF8E8ECCFF8E8ECCFF8E8ECCFF8E8ECCFF8E8E
+        CCFF8E8ECCFF8E8ECCFF8E8ECCFF8D8DCAFF86869AFF8F8F95FF8787BBFF8E8E
+        CCFF8E8ECCFF8E8ECCFFA7A7D7FF0B0BA6FF0707DA1600000000000000000808
+        DF140000BBFF9696D3FF9696D0FF9696D0FF9696D0FF9696D0FF9696D0FF9696
+        D0FF9696D0FF9696D0FF9696D0FF9696D0FF9696D0FF9696D0FF9696D0FF9696
+        D0FF9696D0FF9696D0FF9696D0FF9696D0FF9696D0FF9696D0FF9696D0FF9696
+        D0FF9696D0FF9696D0FFACACDAFF0C0CA9FF0808DF1400000000000000000909
+        E2112C2CCCFDA3A3D9FF9D9DD3FF9D9DD3FF9D9DD3FF9D9DD3FF9D9DD3FF9D9D
+        D3FF9D9DD3FF9D9DD3FF9D9DD3FF9D9DD3FF9D9DD3FF9D9DD3FF9D9DD3FF9D9D
+        D3FF9D9DD3FF9D9DD3FF9D9DD3FF9D9DD3FF9D9DD3FF9D9DD3FF9D9DD3FF9D9D
+        D3FF9D9DD3FF9D9DD3FFB3B3DDFF2222B7FD0909E21100000000000000000707
+        E7087B7BEBCDC1C1F0FFAFAFE0FFB0B0DFFFB0B0DFFFB0B0DFFFB0B0DFFFB0B0
+        DFFFB0B0DEFFB0B0DEFFB0B0DEFFB0B0DEFFB0B0DEFFB0B0DEFFB0B0DEFFB0B0
+        DEFFB0B0DEFFB0B0DEFFB0B0DEFFB0B0DEFFB0B0DEFFB0B0DEFFB0B0DEFFB0B0
+        DEFFB0B0DEFFB2B2DFFFC0C0EDFF6565DECC0707E70800000000000000000000
+        F0015F5FEC317676EDCD3C3CDDFD2626D8FF2626D8FF2626D7FF2626D7FF2626
+        D7FF2626D7FF2626D6FF2626D6FF2626D5FF2626D5FF2626D5FF2626D4FF2626
+        D4FF2626D3FF2626D2FF2626D2FF2626D1FF2626D1FF2626D0FF2626D0FF2626
+        CFFF2626CEFF4848D9FE8484ECCE5656E6310000F00100000000000000000000
+        00000000DA010808EA071515E80E1818ED101818EE101818EE101818EE101818
+        EE101818EE101818EE101818EE101818EE101818EE101818EE101818EE101818
+        EE101818EE101818EE101818EE101818EE101818EE101818EE101818EE101818
+        EE101818ED102222E90F0E0EEA070000DA010000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000
+      }
+      GlyphMargin = -50
+      ParentColor = False
+      Rounding.RoundX = 12
+      Rounding.RoundY = 12
+      Rounding.RoundOptions = []
+      RoundingDropDown.RoundX = 1
+      RoundingDropDown.RoundY = 1
+      RoundingDropDown.RoundOptions = []
+      TextApplyGlobalOpacity = False
+      MemoryUsage = bmuHigh
+    end
+  end
+  object BCPaperPanel2: TBCPaperPanel
+    Left = 10
+    Height = 95
+    Top = 132
+    Width = 366
+    Align = alBottom
+    Alignment = taLeftJustify
+    BorderSpacing.Around = 10
+    ClientHeight = 95
+    ClientWidth = 366
+    Color = clWhite
+    ParentColor = False
+    TabOrder = 1
+    object Nota: TRichView
+      Left = 0
+      Height = 95
+      Top = 0
+      Width = 366
+      TabStop = True
+      TabOrder = 0
+      Align = alClient
+      Tracking = False
+      VScrollVisible = False
+      FirstJumpNo = 0
+      Style = RVStyle1
+      MaxTextWidth = 0
+      MinTextWidth = 0
+      LeftMargin = 5
+      RightMargin = 5
+      BackgroundStyle = bsNoBitmap
+      Delimiters = ' .;,:(){}"'
+      AllowSelection = True
+      SingleClick = False
+    end
+  end
+  object ActionList1: TActionList
+    Left = 320
+    Top = 48
+    object Ok: TAction
+      Caption = 'Ok'
+      OnExecute = OkExecute
+    end
+    object Cancel: TAction
+      Caption = 'Cancel'
+      OnExecute = CancelExecute
+    end
+  end
+  object RVStyle1: TRVStyle
+    TextStyles = <    
+      item
+        CharSet = DEFAULT_CHARSET
+        FontName = 'Arial'
+        Size = 10
+        Color = clWindowText
+        Style = []
+      end    
+      item
+        CharSet = DEFAULT_CHARSET
+        FontName = 'Arial'
+        Size = 10
+        Color = clBlue
+        Style = [fsBold]
+      end    
+      item
+        CharSet = DEFAULT_CHARSET
+        FontName = 'Arial'
+        Size = 10
+        Color = clNavy
+        Style = [fsBold]
+      end    
+      item
+        CharSet = DEFAULT_CHARSET
+        FontName = 'Arial'
+        Size = 10
+        Color = clMaroon
+        Style = [fsItalic]
+      end    
+      item
+        CharSet = DEFAULT_CHARSET
+        FontName = 'Arial'
+        Size = 10
+        Color = clGreen
+        Style = [fsUnderline]
+      end    
+      item
+        CharSet = DEFAULT_CHARSET
+        FontName = 'Arial'
+        Size = 10
+        Color = clGreen
+        Style = [fsUnderline]
+      end>
+    JumpCursor = 101
+    Color = clWindow
+    HoverColor = clNone
+    FullRedraw = True
+    SelColor = clHighlight
+    SelTextColor = clHighlightText
+    Left = 248
+    Top = 40
+  end
+end
